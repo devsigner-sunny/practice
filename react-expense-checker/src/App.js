@@ -21,7 +21,7 @@ const initialExpenses = [
     id: 'e4',
     title: 'New Desk (Wooden)',
     amount: 450,
-    date: new Date(2024, 5, 12),
+    date: new Date(2023, 5, 12),
   },
 ];
 

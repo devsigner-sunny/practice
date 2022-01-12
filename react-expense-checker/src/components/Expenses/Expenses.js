@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
 import ExpensesFilter from "./ExpensesFilter";
+import ExpenseList from "./ExpenseList";
 
 const Expenses = props => {
   const [selectedYear, setSelectedYear] = useState('all');
@@ -20,14 +20,7 @@ const Expenses = props => {
   return (
     <>
       <ExpensesFilter selectedYear={selectedYear} onChangeFilter={filterHandler}/>
-      { displayExpenses.map(item =>
-        <ExpenseItem
-          key={item.id}
-          title={item.title}
-          date={item.date}
-          amount={item.amount}
-        />)}
-
+      <ExpenseList items={displayExpenses} />
     </>
   );
 }
