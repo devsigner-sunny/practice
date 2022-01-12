@@ -35,6 +35,10 @@ const ExpenseForm = props => {
     setInputDate(e.target.value);
   }
 
+  const closeFormHandler = () => {
+    props.onShowForm(false);
+  }
+
   return (
     <form onSubmit={submitHandler}>
       <div className='new-expense__controls'>
@@ -65,6 +69,7 @@ const ExpenseForm = props => {
       </div>
       <div className='new-expense__actions'>
         <button type='submit'>Add Expense</button>
+        <button type='button' onClick={closeFormHandler}>Close</button>
       </div>
     </form>
   );
